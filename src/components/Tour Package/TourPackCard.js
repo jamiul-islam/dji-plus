@@ -23,7 +23,7 @@ const TourPackCard = (props) => {
 
   const [booking, setUser] = useState();
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/tours")
+    fetch("https://dji-plus-server.onrender.com/tours")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, []);
@@ -37,7 +37,7 @@ const TourPackCard = (props) => {
   // ------------------handleDelete
   const handleDelete = (id) => {
     console.log(id);
-    const url = `https://ancient-castle-52925.herokuapp.com/drones/${id}`;
+    const url = `https://dji-plus-server.onrender.com/drones/${id}`;
     fetch(url, {
       method: "DELETE",
     })

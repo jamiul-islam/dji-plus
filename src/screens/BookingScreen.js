@@ -10,7 +10,7 @@ const BookingScreen = () => {
 
   //bookings details
   useEffect(() => {
-    fetch(`https://ancient-castle-52925.herokuapp.com/tours/${id}`)
+    fetch(`https://dji-plus-server.onrender.com/tours/${id}`)
       .then((res) => res.json())
       .then((data) => setData(data));
   }, [id]);

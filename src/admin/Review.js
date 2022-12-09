@@ -7,7 +7,7 @@ const Review = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     axios
-      .post("https://ancient-castle-52925.herokuapp.com/testimonials", data)
+      .post("https://dji-plus-server.onrender.com/testimonials", data)
       .then((response) => {
         // console.log(response);
         if (response.statusText === "OK") {

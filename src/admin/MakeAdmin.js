@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     setEmail(data.email);
     const email = data.email;
     const user = { email };
-    fetch("https://ancient-castle-52925.herokuapp.com/admin", {
+    fetch("https://dji-plus-server.onrender.com/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

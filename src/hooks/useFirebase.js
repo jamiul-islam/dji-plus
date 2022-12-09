@@ -96,7 +96,7 @@ const useFirebase = () => {
 
   // admin data load
   useEffect(() => {
-    fetch(`https://ancient-castle-52925.herokuapp.com/users/${user.email}`)
+    fetch(`https://dji-plus-server.onrender.com/users/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -119,7 +119,7 @@ const useFirebase = () => {
   // save user
   const saveUser = (email, displayName, photoURL, method) => {
     const user = { email, displayName, photoURL };
-    fetch("https://ancient-castle-52925.herokuapp.com/users", {
+    fetch("https://dji-plus-server.onrender.com/users", {
       method: method,
       headers: {
         "content-type": "application/json",

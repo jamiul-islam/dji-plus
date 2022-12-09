@@ -15,7 +15,7 @@ const ManageBookingsScreen = () => {
   const history = useHistory();
   const { admin } = useAuth();
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/bookings")
+    fetch("https://dji-plus-server.onrender.com/bookings")
       .then((res) => res.json())
       .then((data) => setAllBookings(data));
   }, []);
@@ -44,7 +44,7 @@ const ManageBookingsScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://ancient-castle-52925.herokuapp.com/bookings/${id}`)
+          .delete(`https://dji-plus-server.onrender.com/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has deleted", {
@@ -67,7 +67,7 @@ const ManageBookingsScreen = () => {
     const prevData = prevBooking.data;
     prevData.status = "Approved";
     axios
-      .put(`https://ancient-castle-52925.herokuapp.com/bookings/${id}`, {
+      .put(`https://dji-plus-server.onrender.com/bookings/${id}`, {
         newData: prevData,
       })
       .then((res) => {

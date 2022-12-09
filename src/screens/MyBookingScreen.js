@@ -16,7 +16,7 @@ const MyBookingScreen = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/bookings")
+    fetch("https://dji-plus-server.onrender.com/bookings")
       .then((res) => res.json())
       .then((data) =>
         setMyBookings(data.filter((item) => item.data.email === user.email))
@@ -42,7 +42,7 @@ const MyBookingScreen = () => {
     }).then((willDelete) => {
       if (willDelete) {
         axios
-          .delete(`https://ancient-castle-52925.herokuapp.com/bookings/${id}`)
+          .delete(`https://dji-plus-server.onrender.com/bookings/${id}`)
           .then((res) => {
             if (res.data.deletedCount > 0) {
               swal("Poof! Booking has been deleted", {

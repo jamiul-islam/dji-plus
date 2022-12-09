@@ -15,7 +15,7 @@ const Testimonials = () => {
 
   useEffect(() => {
     axios
-      .get("https://ancient-castle-52925.herokuapp.com/testimonials")
+      .get("https://dji-plus-server.onrender.com/testimonials")
       .then((res) => setTestimonialData(res.data));
   }, []);
 

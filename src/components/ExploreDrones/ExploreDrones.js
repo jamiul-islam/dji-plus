@@ -9,7 +9,7 @@ const ExploreDrones = () => {
   const [dronePack, setDronePack] = useState([]);
 
   useEffect(() => {
-    fetch("https://ancient-castle-52925.herokuapp.com/tours")
+    fetch("https://dji-plus-server.onrender.com/tours")
       .then((res) => res.json())
       .then((data) => setDronePack(data));
   }, []);

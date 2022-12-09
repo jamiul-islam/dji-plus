@@ -16,7 +16,7 @@ const BookingForm = ({ bookings, totalBookingCost }) => {
     const newData = { bookings, data };
     console.log(newData);
     axios
-      .post("https://ancient-castle-52925.herokuapp.com/bookings", newData)
+      .post("https://dji-plus-server.onrender.com/bookings", newData)
       .then((response) => {
         if (response.statusText === "OK") {
           swal("Good job!", "Order has been placed", "success").then(() => {
